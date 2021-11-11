@@ -1,0 +1,17 @@
+{
+  "private": "true",
+  "scripts": {
+    "build": "parcel build",
+    "dev": "parcel"
+  },
+  "source": "./src/index.html",
+  "targets": {
+    "default": {
+      "distDir": "./docs",
+      "sourceMap": false
+    }
+  },
+  "devDependencies": {
+    "parcel": "^2.0.1"
+  }
+}
