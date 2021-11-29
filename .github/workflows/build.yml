@@ -13,11 +13,12 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
+          cache: "yarn"
       - run: yarn
       - run: yarn build
       - run: |
           git config user.name owatu
           git config user.email oaoto1811@gmail.com
-          git add -f docs
-          git commit -m "Build for Github Pages" -m "By Github Actions"
-          git push
+      - run: git add docs
+      - run: git commit -m "Build for Github Pages" -m "By Github Actions"
+      - run: git push
