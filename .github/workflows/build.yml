@@ -19,6 +19,7 @@ jobs:
       - run: |
           git config user.name owatu
           git config user.email oaoto1811@gmail.com
-      - run: git add docs
-      - run: git commit -m "Build for Github Pages" -m "By Github Actions"
+      - run: |
+          git add docs
+          git commit -m "Build for Github Pages" -m "By Github Actions"
       - run: git push
